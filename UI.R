@@ -1,7 +1,7 @@
 library(shiny)
 
 # load the data
-dataset = read.csv("C:/Users/apalchow/Desktop/Work_Avijit/Personal/My Learnings/Artificial Intelligence/Coursera Exercises/hw1_data.csv")
+dataset = read.csv("Data/hw1_data.csv")
 
 # Define the overall UI
 shinyUI(
