@@ -1,0 +1,36 @@
+---
+title: "InteractivePlotUsingShiny"
+author: "Avijit PalChowdhury"
+date: "4/18/2020"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+## Overview
+This assignment (Week 4 assignment of Developing Data Products course) is built in Shiny to create an interactive plot (using ggplot). 
+
+The plot attempts to depict relationship between any two air quality parameters selected by the user. 
+
+The application is published at:
+https://jitlovesuall.shinyapps.io/Week_4_Assignment_DevelopingDataProducts/ 
+
+The source codes (UI.R, Server.R and InteractivePlotUsingShiny.Rmd) are available at:
+https://github.com/jitlovesuall/DevelopingDataProducts
+
+
+## Inputs
+The following inputs are expected from the user:
+
+- Parameter in x-axis to choose from the dropdown
+
+- Parameter in y-axis to choose from the dropdown
+
+## Sample Output
+
+```{r, echo=FALSE, warning=FALSE}
+library(ggplot2)
+dataset = read.csv("C:/Users/apalchow/Desktop/Work_Avijit/Personal/My Learnings/Artificial Intelligence/Coursera Exercises/hw1_data.csv")
+ggplot(dataset, aes(x = Temp, y = Ozone)) +
+            geom_point(aes(color = factor(Month)))
+```
